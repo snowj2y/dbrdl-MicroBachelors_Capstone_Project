@@ -1,9 +1,6 @@
 name: Build and deploy to IBM Cloud Foundry
 
-on:
-  push:
-    branches:
-      - master
+on: workflow_dispatch
 
 # Environment variables available to all jobs and steps in this workflow
 env:
@@ -13,7 +10,6 @@ env:
   IBM_CLOUD_ORG: garnickgg@gmail.com
   MANIFEST_NAME: manifest.yml
   IBM_CLOUD_API: ${{secrets.IBM_CLOUD_API_KEY}}
-  CI: false
 
 defaults:
   run:
